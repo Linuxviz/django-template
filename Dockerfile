@@ -1,11 +1,11 @@
-FROM PYTHON:3.11.1-alpine3.16
+FROM python:3.11.1-alpine3.16
 
 # папка с зависимостями
 COPY requirements.txt /temp/requirements.txt
 # папка с приложением
 COPY application /application
 # директория для выполнения команд
-WORKDIR application
+WORKDIR /application
 # открываем доступ к порту
 EXPOSE 8000
 # устанавливаем зависимости
