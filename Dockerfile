@@ -8,6 +8,8 @@ COPY application /application
 WORKDIR /application
 # открываем доступ к порту
 EXPOSE 8000
+
+RUN apk add postgresql-client build-base postgresql-dev
 # устанавливаем зависимости
 RUN pip install -r /temp/requirements.txt
 # создаем юзера без пароля ()
